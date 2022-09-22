@@ -1,0 +1,22 @@
+.tt {
+    font-size: 50px;
+    color: red;
+}
+
+h1 {
+    font-size: 20px;
+    color: red;
+    padding-left: 60px;
+}
+
+span {
+    color: red;
+}
+
+.x1 {
+    color: red;
+}
+
+.x2 {
+    color: blue;
+}
