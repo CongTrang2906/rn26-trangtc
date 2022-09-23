@@ -1,0 +1,68 @@
+span {
+    color: red;
+}
+
+.trang6 {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+}
+
+.a2 {
+    text-align: center;
+}
+
+.a1 {
+    padding-left: 100px;
+}
+
+.trang7 {
+    display: block;
+    width: 80%;
+    padding-left: 10%;
+}
+
+.C1 {
+    text-align: justify;
+    width: 80%;
+    padding-left: 10%;
+}
+
+.n1 {
+    color: white;
+    background-color: red;
+    border-color: white;
+    width: 10%;
+    height: 40px;
+    position: relative;
+    left: 45%;
+}
+
+.trang9 {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.K1 {
+    font-size: 300px;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: red;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    transform: translate(-50%, -50%);
+}
+
+.aa1 {
+    padding-left: 400px;
+    font-size: 25px;
+}
