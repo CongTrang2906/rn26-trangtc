@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-4.6.2-dist/css/bootstrap.min.css">
+</head>
+<style>
+    body {
+        padding-left: 280px;
+        box-sizing: border-box;
+    }
+    
+    .main8 {
+        margin-top: 100px;
+        margin-left: 100px;
+        width: 800px;
+        border: 1px solid black;
+        padding: 24px;
+        border-radius: 10px;
+    }
+    
+    .body-layout {
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+        margin-top: 20px;
+    }
+    
+    .icon {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        border-radius: 10%;
+    }
+    
+    .fa-brands {
+        font-weight: bold !important;
+    }
+    
+    .fa-html5,
+    .fa-apple,
+    .fa-dropbox,
+    .fa-java,
+    .fa-canadian-maple-leaf {
+        margin: auto;
+        color: white;
+    }
+    
+    .progress {
+        width: 500px;
+        margin-left: 70px;
+        flex-basis: 1;
+    }
+    
+    .bg-purple {
+        background-color: rgb(232, 78, 232);
+    }
+</style>
+
+<body>
+    <div class="main8">
+        <!-- layout1 -->
+        <div class="body-layout">
+            <div class="icon" style="background-color: rgb(37, 183, 37);">
+                <i class="fa-brands fa-html5"></i>
+            </div>
+            <p>HTML</p>
+            <div class="progress">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 65%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <!-- layout2 -->
+        <div class="body-layout">
+            <div class="icon" style="background-color: rgb(239, 46, 46);">
+                <i class="fa-brands fa-apple"></i>
+            </div>
+            <p>CSS</p>
+            <div class="progress">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <!-- layout3 -->
+        <div class="body-layout">
+            <div class="icon" style="background-color:rgb(16, 124, 218) ;">
+                <i class="fa-brands fa-dropbox"></i>
+            </div>
+            <p>PHP</p>
+            <div class="progress">
+                <div class="progress-bar bg-primary" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <!-- layout 4 -->
+        <div class="body-layout">
+            <div class="icon" style="background-color:gold ;">
+                <i class="fa-brands fa-java"></i>
+            </div>
+            <p>JAVA</p>
+            <div class="progress">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <!-- layout 5 -->
+        <div class="body-layout">
+            <div class="icon" style="background-color: purple;">
+                <i class="fa-brands fa-canadian-maple-leaf"></i>
+            </div>
+            <p>.NET</p>
+            <div class="progress">
+                <div class="progress-bar bg-purple" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/874851fd28.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

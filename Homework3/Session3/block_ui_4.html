@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    .course-item {
+        background-color: rgba(153, 151, 151, 0.2);
+        height: 720px;
+        width: 360px;
+        border: 2px solid black;
+    }
+    
+    h1 {
+        color: orange;
+        padding-top: 5px;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .grid {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .grid.wide {
+        margin: 10px;
+    }
+    
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -4px;
+        margin-right: -4px;
+    }
+    
+    .col {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+    
+    .place-img {
+        padding-top: 15px;
+        margin-left: 15px;
+        width: 330px;
+        height: 230px;
+    }
+    /* .align-items-center {
+        align-items: center !important;
+    } */
+    
+    .contact {
+        margin-left: 15px;
+        margin-right: 15px;
+        padding-top: 16px;
+    }
+    
+    .contact .email {
+        padding: 1px 0px 1px 20px;
+        color: #fff;
+        box-shadow: 5px 5px 1px 2px rgb(231, 230, 230);
+    }
+    
+    .contact .phone {
+        padding: 1px 10px 1px 20px;
+        margin-top: 16px;
+        color: #fff;
+        box-shadow: 5px 5px 1px 2px rgb(231, 230, 230);
+    }
+    
+    .contact span {
+        padding-left: 5px;
+    }
+    
+    .card-body {
+        margin-left: 15px;
+    }
+    
+    .bg-red {
+        background-color: rgb(247, 83, 82);
+    }
+    
+    .bg-green {
+        background-color: rgb(81, 213, 103);
+    }
+    
+    .bg-bluelight {
+        background-color: rgb(49, 200, 221);
+    }
+    
+    .bg-blue {
+        background-color: rgb(97, 156, 236);
+    }
+    
+    .bg-orange {
+        background-color: rgb(247, 129, 83);
+    }
+    
+    .bg-yellow {
+        background-color: rgb(252, 213, 24);
+    }
+    
+    .bg-pinklight {
+        background-color: rgb(203, 121, 231);
+    }
+    
+    .bg-pink {
+        background-color: rgb(254, 96, 232)
+    }
+</style>
+
+<body>
+    <div class="grid wide">
+        <div class="row">
+            <!-- user1 -->
+            <div class="col l-3">
+                <div class="course-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW5CAaONXcDJzx1LMWfLxGedCh2B1nF7lhkQ&usqp=CAU" alt="" class="place-img">
+                    <h1>ROBORT PATTISON</h1>
+                    <P style="text-align:center ;">Developing</P>
+                    <div class="card">
+                        <!-- row 1 -->
+                        <div class="card-body">
+                            <div>
+                                <i class="fa-solid fa-calendar-days" style="padding-top:5px ;"></i>
+                                <span style="margin-left: 10px;">DBO</span>
+                                <span style="margin-left: 190px;" class="mb-0">23/05/2014</span>
+                            </div>
+                            <div style="padding-top: 20px;">
+                                <i class="fa-solid fa-heart"></i>
+                                <span style="margin-left: 10px;">BG</span>
+                                <span style="margin-left: 254px;" class="mb-0">B+</span>
+                            </div>
+                            <div style="padding-top: 20px;">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <span style="margin-left: 5px;">EDU</span>
+                                <span style="margin-left: 226px;" class="mb-0">MCA</span>
+                            </div>
+                            </li>
+                            <div style="padding-top: 20px;">
+                                <i class="fa-sharp fa-solid fa-location-dot"></i>
+                                <span style="margin-left: 10px;">RES</span>
+                                <span style="margin-left: 203px;" class="mb-0">Bangalore</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact ">
+                        <div class="email bg-red ">
+                            <h4>EMAIL ID</h4>
+                            <p>
+                                <i class="fa-regular fa-envelope "></i>
+                                <span>congtrang@gmail.com</span>
+                            </p>
+                        </div>
+                        <div class="phone bg-green ">
+                            <h4>PHONE NO</h4>
+                            <p>
+                                <i class="fa-solid fa-phone "></i>
+                                <span>0329200254</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- user 2 -->
+            <div class="col l-3">
+                <div class="course-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGyZ0QBNdDr17imXfKlxwJxpDo4iR8wMFMIQ&usqp=CAU" alt="" class="place-img">
+                    <h1>ROBORT PATTISON</h1>
+                    <P style=" text-align:center ; ">Developing</P>
+                    <div class="card ">
+                        <!-- row 2 -->
+                        <div class="card-body ">
+                            <div>
+                                <i class="fa-solid fa-calendar-days" style="padding-top:5px ;"></i>
+                                <span style="margin-left: 10px;">DBO</span>
+                                <span style="margin-left: 190px;" class="mb-0">23/05/2014</span>
+                            </div>
+                            <div style="padding-top: 20px;">
+                                <i class="fa-solid fa-heart"></i>
+                                <span style="margin-left: 10px;">BG</span>
+                                <span style="margin-left: 254px;" class="mb-0">B+</span>
+                            </div>
+                            <div style="padding-top: 20px;">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <span style="margin-left: 5px;">EDU</span>
+                                <span style="margin-left: 226px;" class="mb-0">MCA</span>
+                            </div>
+                            </li>
+                            <div style="padding-top: 20px;">
+                                <i class="fa-sharp fa-solid fa-location-dot"></i>
+                                <span style="margin-left: 10px;">RES</span>
+                                <span style="margin-left: 203px;" class="mb-0">Bangalore</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact ">
+                        <div class="email bg-bluelight ">
+                            <h4>EMAIL ID</h4>
+                            <p>
+                                <i class="fa-regular fa-envelope "></i>
+                                <span>congtrang@gmail.com</span>
+                            </p>
+                        </div>
+                        <div class="phone bg-blue ">
+                            <h4>PHONE NO</h4>
+                            <p>
+                                <i class="fa-solid fa-phone "></i>
+                                <span>0329200254</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- user 3 -->
+            <div class="col l-3 ">
+                <div class="course-item ">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgKPYOF_i-RwdEQQpFKGO4U78qQsVylz1hAw&usqp=CAU " alt=" " class="place-img ">
+                    <h1>ROBORT PATTISON</h1>
+                    <P style="text-align:center ; ">Developing</P>
+                    <div class="card ">
+                        <!-- row 3 -->
+                        <div class="card-body ">
+                            <div>
+                                <i class="fa-solid fa-calendar-days" style="padding-top:5px ;"></i>
+                                <span style="margin-left: 10px;">DBO</span>
+                                <span style="margin-left: 190px;" class="mb-0">23/05/2014</span>
+                            </div>
+                            <div style="padding-top: 20px;">
+                                <i class="fa-solid fa-heart"></i>
+                                <span style="margin-left: 10px;">BG</span>
+                                <span style="margin-left: 254px;" class="mb-0">B+</span>
+                            </div>
+                            <div style="padding-top: 20px;">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <span style="margin-left: 5px;">EDU</span>
+                                <span style="margin-left: 226px;" class="mb-0">MCA</span>
+                            </div>
+                            </li>
+                            <div style="padding-top: 20px;">
+                                <i class="fa-sharp fa-solid fa-location-dot"></i>
+                                <span style="margin-left: 10px;">RES</span>
+                                <span style="margin-left: 203px;" class="mb-0">Bangalore</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact ">
+                        <div class="email bg-orange ">
+                            <h4>EMAIL ID</h4>
+                            <p>
+                                <i class="fa-regular fa-envelope "></i>
+                                <span>congtrang@gmail.com</span>
+                            </p>
+                        </div>
+                        <div class="phone bg-yellow ">
+                            <h4>PHONE NO</h4>
+                            <p>
+                                <i class="fa-solid fa-phone "></i>
+                                <span>0329200254</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- user 4 -->
+            <div class="col l-3 ">
+                <div class="course-item ">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqBz-_ozKY7J4fXbB5-yW4-0cUFqAc8-QNmha-6hk5wR79toi99lDHH-1lIq-IwWv5uM4&usqp=CAU " alt=" " class="place-img ">
+                    <h1>ROBORT PATTISON</h1>
+                    <P style="text-align:center ; ">Developing</P>
+                    <div class="card ">
+                        <!-- row4 -->
+                        <div class="card-body ">
+                            <div>
+                                <i class="fa-solid fa-calendar-days" style="padding-top:5px ;"></i>
+                                <span style="margin-left: 10px;">DBO</span>
+                                <span style="margin-left: 190px;" class="mb-0">23/05/2014</span>
+                            </div>
+                            <div style="padding-top: 20px;">
+                                <i class="fa-solid fa-heart"></i>
+                                <span style="margin-left: 10px;">BG</span>
+                                <span style="margin-left: 254px;" class="mb-0">B+</span>
+                            </div>
+                            <div style="padding-top: 20px;">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                <span style="margin-left: 5px;">EDU</span>
+                                <span style="margin-left: 226px;" class="mb-0">MCA</span>
+                            </div>
+                            </li>
+                            <div style="padding-top: 20px;">
+                                <i class="fa-sharp fa-solid fa-location-dot"></i>
+                                <span style="margin-left: 10px;">RES</span>
+                                <span style="margin-left: 203px;" class="mb-0">Bangalore</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact ">
+                        <div class="email bg-pinklight ">
+                            <h4>EMAIL ID</h4>
+                            <p>
+                                <i class="fa-regular fa-envelope "></i>
+                                <span>congtrang@gmail.com</span>
+                            </p>
+                        </div>
+                        <div class="phone bg-pink ">
+                            <h4>PHONE NO</h4>
+                            <p>
+                                <i class="fa-solid fa-phone "></i>
+                                <span>0329200254</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/874851fd28.js " crossorigin="anonymous "></script>
+</body>
+
+</html>

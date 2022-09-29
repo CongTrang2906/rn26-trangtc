@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    
+    .main {
+        width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .head {
+        height: 500px;
+        position: relative;
+    }
+    
+    .bg {
+        background-image: url(https://i0.wp.com/d9n64ieh9hz8y.cloudfront.net/wp-content/uploads/20180504182823/3-diem-nhan-dang-mong-doi-tu-marvels-spider-man-gioi-thieu-game-01.jpg?fit=1920%2C870&ssl=1);
+        height: 100%;
+        background-repeat: no-repeat;
+        width: 100%;
+        background-size: cover;
+    }
+    
+    .profile {
+        display: flex;
+        position: absolute;
+        bottom: 50px;
+        left: 50px;
+    }
+    
+    img {
+        height: 170px;
+        width: 170px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    
+    .inf {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 30px;
+    }
+    
+    .content {
+        text-transform: uppercase;
+    }
+    
+    .list {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid;
+        border-color: #ccc;
+    }
+    
+    .content p {
+        margin: 10px 50px;
+    }
+    
+    .list p:nth-child(2) {
+        padding: 4px 10px;
+        border-radius: 5px;
+        color: black;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="head">
+            <div class="bg">
+                <div class="profile">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqBz-_ozKY7J4fXbB5-yW4-0cUFqAc8-QNmha-6hk5wR79toi99lDHH-1lIq-IwWv5uM4&usqp=CAU" alt="">
+                    <div class="inf">
+                        <h1>Spider Man</h1><br>
+                        <p style="font-size: 20px;">Peter Parker</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <!-- list 1 -->
+            <div class="list">
+                <p>followers</p>
+                <p style="background-color: red;">1,200</p>
+            </div>
+            <!-- list 2 -->
+            <div class="list">
+                <p>followings</p>
+                <p style="background-color: rgb(31, 142, 197);">1,200</p>
+            </div>
+            <!-- list 3 -->
+            <div class="list">
+                <p>messages</p>
+                <p style="background-color: rgb(29, 193, 103);">1,200</p>
+            </div>
+            <!-- list 4 -->
+            <div class="list">
+                <p>likes</p>
+                <p style="background-color: gold;">1,200</p>
+            </div>
+            <!-- list 5 -->
+            <div class="list">
+                <p>comments</p>
+                <p style="background-color:rgb(224, 32, 218) ;">1,200</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
