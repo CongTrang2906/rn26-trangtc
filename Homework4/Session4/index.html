@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+        
+        th:last-child {
+            width: 715px;
+            border-bottom: 1px solid #000;
+            transform: translateY(14px) translateX(0px) rotate(178deg);
+            position: absolute;
+            z-index: -1;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+        }
+    </style>
+    </head>
+
+    <body>
+        <!-- Thuộc tính transition xác định một quá trình chuyển đổi khi có một hành động. -->
+        <table cellspacing="0" cellpadding="0">
+            <tbody>
+                <tr>
+                    <th class="w20p">Thuộc tính</th>
+                    <th class="w17p">giá trị</th>
+                    <th class="w25p">Ví dụ</th>
+                    <th></th>
+                </tr>
+                <tr id="anchor01">
+                    <td rowspan="3"><a href="example/ex_transition_css3.php#anchor01" target="_blank">transition-property</a></td>
+                    <td>none</td>
+                    <td>transition-property: none;</td>
+                    <td>Hiệu ứng của quá trình chuyển đổi sẽ không được hiển thị.</td>
+                </tr>
+                <tr>
+                    <td id="anchor02"><a href="example/ex_transition_css3.php#anchor02" target="_blank">width<br>
+                        height</a></td>
+                    <td>transition-property: height;</td>
+                    <td>Xác định hiệu ứng của quá trình chuyển đổi cho các thuộc tính css, mỗi thuộc tính cách nhau bằng dấu phẩy.
+                    </td>
+                </tr>
+                <tr>
+                    <td id="anchor03"><a href="example/ex_transition_css3.php#anchor03" target="_blank">all</a></td>
+                    <td>transition-property: all;</td>
+                    <td>Xác định hiệu ứng của quá trình chuyển đổi cho tất cả thuộc tính.</td>
+                </tr>
+                <tr>
+                    <td id="anchor04"><a href="example/ex_transition_css3.php#anchor04" target="_blank">transition-duration</a></td>
+                    <td><a href="example/ex_transition_css3.php#anchor04" target="_blank">Thời gian</a></td>
+                    <td>transition-duration: 10s;</td>
+                    <td>Quá trình chuyển đổi mất bao nhiêu thời gian.</td>
+                </tr>
+                <tr>
+                    <td rowspan="6" id="anchor05"><a href="example/ex_transition_css3.php#anchor05" target="_blank">transition-timing-function</a></td>
+                    <td id="anchor06"><a href="example/ex_transition_css3.php#anchor06" target="_blank">ease</a></td>
+                    <td>transition-timing-function: ease;</td>
+                    <td>Xác định một hiệu ứng của quá trình chuyển đổi với một sự khởi đầu chậm, sau đó nhanh chóng, sau đó kết thúc chậm.</td>
+                </tr>
+                <tr>
+                    <td id="anchor07"><a href="example/ex_transition_css3.php#anchor07" target="_blank">ease-in</a></td>
+                    <td>transition-timing-function: ease-in;</td>
+                    <td>Xác định một hiệu ứng của quá trình chuyển đổi với một khởi đầu chậm chạp.</td>
+                </tr>
+                <tr>
+                    <td id="anchor08"><a href="example/ex_transition_css3.php#anchor08" target="_blank">ease-out</a></td>
+                    <td>transition-timing-function: ease-out;</td>
+                    <td>Xác định một hiệu ứng của quá trình chuyển đổi với một kết thúc chậm.</td>
+                </tr>
+                <tr>
+                    <td id="anchor09"><a href="example/ex_transition_css3.php#anchor09" target="_blank">ease-in-out</a></td>
+                    <td>transition-timing-function: ease-in-out;</td>
+                    <td>Xác định một hiệu ứng của quá trình chuyển đổi với một khởi đầu và kết thúc chậm.</td>
+                </tr>
+                <tr>
+                    <td id="anchor10"><a href="example/ex_transition_css3.php#anchor10" target="_blank">linear</a></td>
+                    <td>transition-timing-function: linear;</td>
+                    <td>Xác định một hiệu ứng của quá trình chuyển đổi với cùng một tốc độ từ đầu đến cuối.</td>
+                </tr>
+                <tr>
+                    <td id="anchor11"><a href="example/ex_transition_css3.php#anchor11" target="_blank">cubic-bezier(n,n,n,n)</a></td>
+                    <td>transition-timing-function: cubic-bezier(0,1,0.35,0);</td>
+                    <td>Xác định giá trị cho hiệu ứng của quá trình chuyển đổi theo từng giai đoạn, giá trị xác định chỉ có thể từ 0 tới 1.</td>
+                </tr>
+                <tr>
+                    <td id="anchor12"><a href="example/ex_transition_css3.php#anchor12" target="_blank">transition-delay</a>
+                    </td>
+                    <td><a href="example/ex_transition_css3.php#anchor12" target="_blank">thời gian</a></td>
+                    <td>transition-delay: 3s;</td>
+                    <td>Xác định thời gian chờ đợi trước khi các hiệu ứng của quá trình chuyển đổi sẽ bắt đầu.</td>
+                </tr>
+                <tr>
+                    <td id="anchor13"><a href="example/ex_transition_css3.php#anchor13" target="_blank">transition</a></td>
+                    <td><a href="example/ex_transition_css3.php#anchor13" target="_blank">[property] [duration]
+                        [timing-function] [delay]</a></td>
+                    <td>transition: height 2s ease 3s;</td>
+                    <td>Đây là thuộc tính tập hợp các thuộc tính trên.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+
+</body>
+
+</html>
