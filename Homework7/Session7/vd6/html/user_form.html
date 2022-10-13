@@ -94,7 +94,7 @@
         }
         //-----------------------------------------------------In dãy số fibonacci
         function print(n) {
-            // let pre = document.getElementById('input__text').value;
+            var n = document.getElementById('input__text').value;
 
             var pre = 0;
             var next = 1;
@@ -111,7 +111,7 @@
             }
             console.log(arr);
         }
-        print(1);
+
 
 
 
@@ -142,10 +142,13 @@
             }
         }
         //----------------------------------------------------Vẽ tam giác vuông
-        let a = '';
-        for (let i = 0; i < 5; i++) {
-            a += '*';
-            console.log(a);
+        function print(n) {
+            var n = document.getElementById('input__text').value;
+            let a = '';
+            for (let i = 0; i < n; i++) {
+                a += '*';
+                console.log(a);
+            }
         }
     </script>
 </body>
