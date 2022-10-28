@@ -26,21 +26,26 @@ a {
     color: blue;
 } */
 
+
 .body {
     padding-top: 50px;
+   
+
 }
 
-table {
+.table1 {
     border-collapse: collapse;
     border-spacing: 0;
-    width: 80%;
+    width: 45%;
     border: 1px solid #ddd;
+    margin-top: 60px;
 }
 
 #table_users {
     margin-left: auto;
     margin-right: auto;
 }
+
 
 th,
 td {
@@ -49,21 +54,30 @@ td {
 }
 
 tr:nth-child(even) {
-    background-color: #81cbf4;
+    background-color: #b8baba;
 }
 
 tr:nth-child(odd) {
-    background-color: #a3dbf9;
+    background-color: #c4c8c8;
 }
-
-.ip1 {
+.btn-control{
+    display: flex;
+    
+   
+}
+.btn1{
+    min-width: 70px;
+    height: 35px;
+    border-radius: 5px;
+}
+.btn-ip1 {
     background-color: rgb(239, 31, 31);
-    border-radius: 8px;
-    padding: 5px;
+    margin-right: 8px;
+  
 }
 
-.ip2 {
-    background-color: rgb(22, 196, 63);
-    border-radius: 8px;
-    padding: 5px;
+.btn-ip2 {
+    background-color: rgb(4, 192, 85);
+    margin-left: 8px;
+
 }

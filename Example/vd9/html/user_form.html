@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/user_form.css">
+    <link rel="stylesheet" href="../bootstrap-4.6.2-dist/css/bootstrap.min.css" />
+    <script src="../jquery/jquery.min.js"></script>
+    <script src="../jquery/jquery.validate.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="./bootstrap-4.6.2-dist/css/bootstrap.min.css"> -->
+</head>
+<style>
+
+</style>
+
+<body>
+    <div class="main">
+        <header></header>
+        <!-- <iframe src="./header.html " width="100%"  frameborder="0"></iframe> -->
+        <!-- <div class="header"> -->
+        <!-- navbar -->
+        <!-- <ul class="nav-list">
+                <li class="nav-item"><a href="home.html">Home</a></li>
+                <li class="nav-item"><a href="User_list.html">User List</a></li>
+                <li class="nav-item"> <a href="user_form.html">User Form</a></li>
+            </ul>
+        </div> -->
+
+
+
+        <div class="body1">
+            <form id="myForm" onsubmit="return false">
+                <!-- Avatar -->
+                <div class="imgcontainer">
+                    <img src="https://bloganchoi.com/wp-content/uploads/2022/02/avatar-trang-y-nghia.jpeg" alt="avatar"
+                        class="avatar">
+                </div>
+                <!-- user -->
+                <div class="text1">
+                    <label for="fname">Name</label>
+                    <input class="ip" type="text" id="input__name" name="name" placeholder="Your name..">
+                </div>
+                <!-- age -->
+                <div class="text2">
+                    <label for="fname">Age</label>
+                    <input class="ip" type="text" id="input__age" name="age" placeholder="Your age..">
+                </div>
+                <!-- password -->
+                <div class="text3">
+                    <label for="lname">Address</label>
+                    <input class="ip" type="text" id="input__address" name="address" placeholder="Your address..">
+                </div>
+                <!-- Show password -->
+                <!-- <div class="showpasswork">
+                    <input type="checkbox" onclick="myFunction()">Show Password
+                </div> -->
+                <!-- checkbox -->
+                <div class="checked">
+                    <label> <input type="checkbox" checked="checked" name="remember">Check</label>
+                </div>
+                <!--submit  -->
+                <div class="btn1">
+                    <button onclick="handleSubmit(this)" id="btn_submit" >Submit</button>    
+                </div>
+            </form>
+        </div>
+        <footer></footer>
+    </div>
+
+    <script>
+
+        //-----------------------------------------------btn-submit
+        // gọi sự kiện ở trên nút btn-submit
+         // Check validate
+        // var settings = {
+        //     rules: {
+        //         name: {
+        //             required: true,
+        //             name: true,
+        //             minlength: 6,
+        //         },
+        //     },
+        //     messages: {
+        //         name: {
+        //             required: 'Bạn chưa nhập name',
+        //             // minlength: jQuery.validator.format('Toi thieu co {0} ky tu'),
+        //             name: 'name khong hop le',
+        //         } 
+        //     },
+        // };
+
+        // var validator = $('#myForm').validate(settings);
+
+        // post
+        // function handleReset() {
+        //     let elementInputEmail = document.getElementById('input__name');
+        //     let elementInputPassword = document.getElementById('input__lastName');
+        //     let elementInputCheckBox = document.getElementById('input__checkbox');
+        //     if (elementInputEmail) {
+        //         elementInputEmail.value = '';
+        //     }
+        //     if (elementInputCheckBox) {
+        //         elementInputCheckBox.checked = false;
+        //     }
+        // }
+
+        function handleSubmit(event) {
+            let elementInputName = document.getElementById('input__name');
+            let elementInputAge = document.getElementById('input__age');
+            let elementInputAddress = document.getElementById('input__address');
+            let objectUser = {
+                name: elementInputName?.value,
+                age: elementInputAge?.value,
+                address: elementInputAddress?.value,
+            }
+
+            let id = getIdUrl();
+            if (id) {
+                putData(objectUser, id);
+            } else {
+                postData(objectUser);
+            }
+
+            // console.log(objectUser);
+            // postData(objectUser)
+            return false;
+        }
+        function postData(user) {
+            fetch("https://634e9e894af5fdff3a623edf.mockapi.io/person", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(user),
+            })
+                .then((response) => response.json())
+                .then((res) => console.log(res))
+                .catch((error) => {
+                    console.error("Error:", error);
+                });
+        }
+
+        // update
+
+        window.onload = function () {
+            let id = getIdUrl();
+            // getUser();
+            getUser(id);
+ 
+        };
+
+        function getUser() {
+            let id = getIdUrl();
+            fetch("https://634e9e894af5fdff3a623edf.mockapi.io/person/" + id, {
+                method: "GET",
+            })
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data);
+                    document.getElementById("input__name").value = data.name;
+                    document.getElementById("input__age").value = data.age;
+                    document.getElementById("input__address").value = data.address;
+                    document.getElementById('btn_submit').textContent = 'Update';
+                })
+                .catch((error) => {
+                    console.error("Error:", error);
+                });
+            console.log(id);
+        }
+        function getIdUrl() {
+            let url = new URL(window.location.href);
+            let id = url.searchParams.get("id");
+            return id;
+        }
+
+
+
+        function putData(user, id) {
+            fetch("https://634e9e894af5fdff3a623edf.mockapi.io/person/" + id, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(user),
+            })
+                .then((response) => response.json())
+                .then((res) => console.log(res))
+                .catch((error) => {
+                    console.error("Error:", error);
+                });
+        }
+
+    </script>
+    <!------------------------------- jquery ------------------------------------->
+    <!-- <script>
+        var settings = {
+            rules: {
+                // lấy cái name:
+                email: {
+                    required: true,
+                    email: true,
+                    minlength: 6,
+
+                },
+                // lấy cái name:
+                password: {
+                    required: true,
+                    minlength: 6,
+                    maxlength: 20,
+                    //RegExp :,
+
+                },
+
+            },
+            messages: {
+                // lấy cái name:
+                email: {
+                    required: 'Bạn chưa nhập tên',
+                    minlength: jQuery.validator.format('Toi thieu co {0} ky tu'),
+                    email: 'Dia chi email khong hop le',
+                },
+                // lấy cái name:
+                password: {
+                    required: 'Bạn chưa nhập mật khẩu',
+                    minlength: jQuery.validator.format('Toi thieu co {0} ky tu'),
+                    email: 'Password khong hop le',
+                },
+            },
+        };
+
+        var validator = $('#myForm').validate(settings);
+    </script> -->
+
+    <script src="../js/home.js"></script>
+
+</body>
+
+</html>

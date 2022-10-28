@@ -27,7 +27,15 @@
 a {
     text-decoration: none;
 } */
-
+.body1 {
+    max-width: 720px; 
+    padding: 32px;
+    margin: 36px auto 0 auto;
+    background-color: rgb(183, 179, 179);
+    border-radius: 8px;
+   
+    
+}
 .ip {
     width: 100%;
     padding: 12px 20px;
@@ -37,23 +45,39 @@ a {
     border-radius: 4px;
 }
 
-.body1 {
-    max-width: 720px;
-    padding: 32px;
-    margin: 36px auto 0 auto;
-    background-color: rgb(201, 197, 197);
-    border-radius: 8px;
-}
+.imgcontainer {
+    text-align: center;
 
-.sm:hover {
+  }
+img.avatar {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+  }
+
+#btn__submit:hover {
     background-color: #45a049;
 }
 
 .rs:hover {
     background-color: #45a049;
 }
+.text1,
+.text2,
+.text3{
+    margin-top: 20px;
+}
+.showpasswork,
+.checked{
+    margin-top: 10px;
+}
 
-.btn {
+.btn1 {
     margin-top: 40px;
     text-align: center;
+   
+}
+#btn_submit{
+   width: 140px;
+    height: 45px;
 }
